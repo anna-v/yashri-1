@@ -3,7 +3,7 @@ body {
   font-family: 'Roboto', 'Arial', sans-serif;
   padding: 0;
   margin: 0;
-  background: url(../../source/img/header__bgr.jpg) 20% 0%;
+  background: url(../img/header__bgr.jpg) 20% 0%;
   background-attachment: fixed;
 }
 a {
