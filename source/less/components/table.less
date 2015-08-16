@@ -1,0 +1,313 @@
+.main-content {
+  padding: 0 5% 5%;
+  box-sizing: border-box;
+
+  @media @medium {
+    padding: 0;
+  }
+}
+
+.flights {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  margin: 50px auto 0;
+  position: relative;
+  border-collapse: collapse;
+  text-align: center;
+  overflow: hidden;
+
+  @media @small {
+    font-size: 14px;
+  }
+}
+
+.flights__header {
+  display: table-row;
+  font-size: 18px;
+  line-height: 20px;
+  color: white;
+  background: @gray-dark;
+  font-weight: 300;
+
+  @media @large {
+    font-size: 16px;
+  }
+}
+
+.flights__header--fixed {
+  position: fixed;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  vertical-align: middle;
+  z-index: 1;
+
+  @media @medium {
+    width: 100%;
+  }
+}
+
+.flights__company-logo {
+  margin-top: 5px;
+  width: 100%;
+  max-width: 150px;
+}
+
+.flights__company-title {
+  @media @large {
+    display: none;
+  }
+}
+
+.flights__flight {
+  display: table-row;
+  position: absolute;
+  opacity: 0;
+  font-weight: 400;
+  // border: 1px solid red;
+  cursor: pointer;
+
+  &:nth-child(even) {
+    background-color: @gray-light;
+  }
+
+  &:nth-child(odd) {
+    background-color: @gray-lighter;
+  }
+
+  &:hover {
+    background: #d1ccb8;
+  }
+}
+
+.flights__item {
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  min-height: 65px;
+  padding: 20px 15px;
+
+  &:hover:after {
+    display: inline-block;
+    content: '';
+    position: absolute;
+    top: -9999px;
+    left: 0;
+    width: 100%;
+    height: 999999px;
+    margin-top: 0px;
+    z-index: -1;
+    background: #cbba77;
+  }
+
+  &--header {
+    height: 80px;
+
+    &:hover:after {
+      display: none;
+    }
+  }
+
+  @media @small {
+    padding: 10px 5px;
+  }
+}
+
+.flights__item--header {
+  width: 15%;
+
+  @media @small {
+    width: 20%;
+    font-size: 14px;
+  }
+}
+
+.flights__item--header--type {
+  width: 6%;
+
+  @media @medium {
+    width: 10%;
+  }
+}
+
+.flights__item--header--time {
+  width: 10%;
+
+  @media @small {
+    width: 12%;
+  }
+}
+
+.flights__item--header--number {
+  width: 6%;
+
+  @media @medium {
+    width: 10%;
+  }
+  @media @small {
+    width: 12%;
+  }
+}
+
+.flights__item--header--plane {
+  @media @big {
+    width: 10%;
+  }
+  @media @medium {
+    width: 15%;
+  }
+  @media @small {
+    width: 10%;
+  }
+}
+
+.flights__item--header--company {
+  @media @medium {
+    width: 15%;
+  }
+
+  @media @small {
+    width: 18%;
+  }
+}
+
+.flights__item--header--terminal {
+  width: 6%;
+
+  @media @big {
+    width: 8%;
+  }
+
+  @media @medium {
+    width: 10%;
+  }
+
+  @media @small {
+    display: none;
+  }
+}
+
+.flights__item--header--status {
+  width: 12%;
+
+  @media @big {
+    width: 15%;
+  }
+
+  @media @small {
+    width: 18%;
+  }
+}
+
+.flights__item--header--codesharing {
+  @media @medium {
+    display: none;
+  }
+}
+
+.flights__type {
+  font-size: 0;
+  background: data-uri('../../source/img/icn_in.png') 50% 50% no-repeat;
+  background-size: 30px;
+
+  &--out {
+    background-image: data-uri('../../source/img/icn_out.png');
+  }
+
+  @media @small {
+    background-size: 25px;
+  }
+}
+
+.flights__plane-title {
+  @media @big {
+    display: none;
+  }
+}
+
+.flights__terminal {
+  @media @small {
+    display: none;
+  }
+}
+
+.flights__code-sharing {
+  @media @medium {
+    display: none;
+  }
+}
+
+.flights__plane {
+  @media @medium {
+    // display: none;
+  }
+}
+
+.flights__terminal {
+  @media @small {
+    display: none;
+  }
+}
+
+.table-label {
+  display: block;
+  max-width: 200px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 26px;
+  font-weight: 100;
+  color: white;
+  user-select: none;
+  cursor: pointer;
+
+  @media @medium {
+    display: inline-block;
+    padding-left: 5%;
+  }
+
+  @media @small {
+    font-weight: 300;
+    padding-left: 0;
+    padding-right: 20px;
+  }
+}
+
+.flights__airport {
+  @media @large {
+    display: none;
+  }
+}
+
+.table-control {
+  position: absolute;
+  opacity: 0;
+
+  & + .table-label:before {
+    display: inline-block;
+    vertical-align: -7px;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin-right: 10px;
+    border: 1px solid white;
+    content: '';
+  }
+
+  &:checked + .table-label:before {
+    background: data-uri('../../source/img/check.png') 50% 50% no-repeat;
+    background-size: 25px;
+  }
+}
+
+.table-control--out:checked ~ .flights .flights__flight--out {
+  position: static;
+  opacity: 1;
+}
+
+.table-control--in:checked ~ .flights .flights__flight--in {
+  position: static;
+  opacity: 1;
+}

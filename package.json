@@ -1,0 +1,30 @@
+{
+  "name": "YaShri-1",
+  "version": "0.0.1",
+  "description": "Задание 1 в рамках поступления в ШРИ Яндекса: табло аэропорта без JS.",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "grunt lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anna-v/yashri-1.git"
+  },
+  "author": "Анна Васильева",
+  "bugs": {
+    "url": "https://github.com/anna-v/yashri-1/issues"
+  },
+  "homepage": "https://github.com/anna-v/yashri-1",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-copy": "^0.8.0",
+    "grunt-contrib-cssmin": "^0.13.0",
+    "grunt-contrib-less": "^1.0.1",
+    "grunt-contrib-uglify": "^0.9.1",
+    "grunt-lintspaces": "^0.7.0",
+    "grunt-postcss": "^0.5.5"
+  },
+  "dependencies": {
+    "normalize.css": "^3.0.3"
+  }
+}
